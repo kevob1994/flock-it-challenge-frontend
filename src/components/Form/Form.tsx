@@ -16,9 +16,13 @@ export interface IForm {
 
 export const Form: FC<IForm> = ({ formik, infoInputs }) => {
   return (
-    <form className='space-y-4 md:space-y-6 mb-4' onSubmit={formik.handleSubmit}>
+    <form
+      className='space-y-4 md:space-y-6 mb-4'
+      onSubmit={formik.handleSubmit}
+    >
       {infoInputs.map((item) => (
         <Input
+          key={item.name}
           name={item.name}
           type={item.type}
           label={item.label}
