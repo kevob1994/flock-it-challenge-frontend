@@ -52,9 +52,16 @@ export const useClient = (): useClientI => {
         config.headers!.Authorization = `Bearer ${token}`;
       }
     }
-		//@ts-ignore
-		axios.interceptors.request.use(AxiosLogger.requestLogger, AxiosLogger.errorLogger);
-		axios.interceptors.response.use(AxiosLogger.responseLogger, AxiosLogger.errorLogger);
+
+    axios.interceptors.request.use((request) => {
+      console.log('Starting Request', JSON.stringify(request, null, 2));
+      return request;
+    });
+
+    axios.interceptors.response.use((response) => {
+      console.log('Response:', JSON.stringify(response, null, 2));
+      return response;
+    });
 
     const response = await axios(config);
 
