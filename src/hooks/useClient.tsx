@@ -1,6 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { QueryCache } from 'react-query';
-import * as AxiosLogger from 'axios-logger';
 
 const queryCache = new QueryCache();
 
