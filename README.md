@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicacion que muestra la lista de las provincias de argentinas que se pueden ubicar en el mapa, para hacer uso de esta app requiere el registro previo.
 
+DEMO: https://flock-it-challenge-frontend-bg0s2mn0h-kevob1994.vercel.app/
+
 ## Tecnologías
 
 - [React](https://es.reactjs.org/)
