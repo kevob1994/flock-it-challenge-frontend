@@ -7,12 +7,6 @@ interface useClientI {
   client: ClientI;
 }
 
-interface FetchConfigI {
-  method: string;
-  body: any;
-  headers: any;
-}
-
 type EndpointRequest = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
 interface ClientI {
